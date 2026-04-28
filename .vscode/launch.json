@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "🌐 CashOut - Chrome",
+        "request": "launch",
+        "type": "dart",
+        "args": [
+          "--dart-define=SUPABASE_URL=https://gwowptjimzxyhmynhabv.supabase.co",
+          "--dart-define=SUPABASE_ANON_KEY=sb_publishable_zsqvRNUFchpMmNXIPsX_SQ_2Xxyc5IV"
+        ],
+        "deviceId": "chrome"
+      },
+      {
+        "name": "🖥️ CashOut - Windows",
+        "request": "launch",
+        "type": "dart",
+        "args": [
+          "--dart-define=SUPABASE_URL=https://gwowptjimzxyhmynhabv.supabase.co",
+          "--dart-define=SUPABASE_ANON_KEY=sb_publishable_zsqvRNUFchpMmNXIPsX_SQ_2Xxyc5IV"
+        ],
+        "deviceId": "windows"
+      }
+    ]
+  }

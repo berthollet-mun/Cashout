@@ -1,0 +1,82 @@
+# ================================ 
+# 📁 pubspec.yaml 
+# Projet : CashOut 
+# Description : Gestionnaire de Sorties de Caisse 
+# ================================ 
+ 
+name: cashout 
+description: "Gestionnaire professionnel de sorties de caisse avec reçus et rapports" 
+publish_to: 'none' 
+version: 1.0.0+1 
+ 
+environment: 
+  sdk: '>=3.0.0 <4.0.0' 
+ 
+dependencies: 
+  flutter: 
+    sdk: flutter 
+ 
+  # ── Supabase (Backend) ────────────────────────────── 
+  supabase_flutter: ^2.3.4 
+ 
+  # ── GetX (State Management + Navigation + DI) ─────── 
+  get: ^4.6.6 
+ 
+  # ── Persistance locale ─────────────────────────────── 
+  shared_preferences: ^2.2.3 
+ 
+  # ── PDF & Impression ───────────────────────────────── 
+  pdf: ^3.10.8 
+  printing: ^5.12.0 
+ 
+  # ── Internationalisation (dates & montants) ────────── 
+  intl: ^0.19.0 
+ 
+  # ── Graphiques ─────────────────────────────────────── 
+  fl_chart: ^0.67.0 
+ 
+  # ── Responsive UI ──────────────────────────────────── 
+  flutter_screenutil: ^5.9.0 
+ 
+  # ── Icônes supplémentaires ─────────────────────────── 
+  cupertino_icons: ^1.0.6 
+  flutter_svg: ^2.0.10+1 
+ 
+  # ── UI Helpers ─────────────────────────────────────── 
+  shimmer: ^3.0.0              # Effet squelette chargement 
+  lottie: ^3.1.0               # Animations Lottie 
+  cached_network_image: ^3.3.1 # Images avec cache 
+  image_picker: ^1.0.7         # Sélection d'image (avatar) 
+ 
+  # ── Utilitaires ────────────────────────────────────── 
+  uuid: ^4.3.3                 # Génération UUID côté client 
+  path_provider: ^2.1.2        # Accès aux chemins système 
+  open_file: ^3.3.2            # Ouvrir fichiers PDF 
+  share_plus: ^9.0.0           # Partager fichiers 
+  url_launcher: ^6.2.5         # Ouvrir URLs 
+  connectivity_plus: ^6.0.3    # Vérifier connexion réseau 
+  flutter_animate: ^4.5.0      # Animations fluides 
+  gap: ^3.0.1                  # Espacement facile 
+  dropdown_search: ^5.0.6      # Dropdown avec recherche 
+  table_calendar: ^3.1.1       # Sélecteur de date calendrier 
+ 
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter 
+  flutter_lints: ^3.0.0 
+  flutter_launcher_icons: ^0.13.1 
+ 
+flutter_launcher_icons: 
+  android: "ic_launcher" 
+  ios: true 
+  image_path: "assets/images/logo.png" 
+  min_sdk_android: 21 
+ 
+flutter: 
+  uses-material-design: true 
+ 
+  # ── Assets ─────────────────────────────────────────── 
+  assets: 
+    - assets/images/ 
+    - assets/icons/ 
+    - assets/animations/ 
