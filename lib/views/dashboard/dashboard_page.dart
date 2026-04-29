@@ -68,17 +68,27 @@ class DashboardPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 12),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Bonjour, ${profile?.fullName ?? 'Utilisateur'}',
-                          style: AppTextStyles.h3,
-                        ),
-                        Text(
-                          profile?.role.toUpperCase() ?? 'CHARGÉ DE CAISSE',
-                          style: AppTextStyles.bodySmall.copyWith(color: AppColors.textSecondary),
-                        ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Bonjour, ${profile?.fullName ?? 'Utilisateur'}',
+                            style: AppTextStyles.h3,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                          Text(
+                            profile?.role.toUpperCase() ?? 'CHARGÉ DE CAISSE',
+                            style: AppTextStyles.bodySmall.copyWith(color: AppColors.textSecondary),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
                       ],
                     ),
                   ],
