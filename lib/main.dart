@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'app/bindings/initial_binding.dart';
 import 'app/routes/app_pages.dart';
@@ -15,6 +16,7 @@ import 'core/utils/constants.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: WidgetsBinding.instance);
   await initializeDateFormatting('fr_FR');
 
   if (!AppConstants.isSupabaseConfigured) {
@@ -36,6 +38,9 @@ Future<void> main() async {
   await Get.putAsync(() => StorageService.init(), permanent: true);
   Get.put(SupabaseService(), permanent: true);
   Get.put(ConnectivityService(), permanent: true);
+
+  // Retire le splash natif et affiche l'app Flutter
+  FlutterNativeSplash.remove();
 
   runApp(const CashOutApp());
 }
